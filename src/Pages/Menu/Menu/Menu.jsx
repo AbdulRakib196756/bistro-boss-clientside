@@ -21,14 +21,14 @@ const Menu = () => {
       <Helmetheaders subtitle={"Menu"}></Helmetheaders>
       <Cover img={img} title="Our Menu"></Cover>
       <Headers title={"Todays Offer"} subtitle={"Don't miss"}></Headers>
-      <MenuCategory items={offered}></MenuCategory>
+      <MenuCategory items={offered} title={"OFFERD"}></MenuCategory>
       <MenuCategory items={soup} img={soupimg} title={"SOUP"}></MenuCategory>
       <MenuCategory items={salad} img={saladimg} title={"SALAD"}></MenuCategory>
       <MenuCategory items={pizza} img={pizzaimg} title={"PIZZA"}></MenuCategory>
       <MenuCategory
         items={dessert}
         img={dessertimg}
-        title={"DESSERTS"}
+        title={"DESSERT"}
       ></MenuCategory>
     </>
   );
