@@ -13,13 +13,21 @@ const OrderFood = () => {
   const { category } = useParams();
   const initialindex = catagories.indexOf(category);
   const [tabIndex, setTabIndex] = useState(initialindex);
-  const [menu] = UseMenu();
+  const [menu, loading] = UseMenu();
+
   const soup = menu.filter((item) => item.category === "soup");
   const offered = menu.filter((item) => item.category === "offered");
   const salad = menu.filter((item) => item.category === "salad");
   const pizza = menu.filter((item) => item.category === "pizza");
   const drinks = menu.filter((item) => item.category === "drinks");
   const dessert = menu.filter((item) => item.category === "dessert");
+  if (loading) {
+    return (
+      <div className="text-center pt-40">
+        <span className="loading loading-dots loading-lg"></span>
+      </div>
+    );
+  }
   return (
     <div>
       <Helmetheaders subtitle={"Order"}></Helmetheaders>
